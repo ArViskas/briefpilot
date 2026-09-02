@@ -1,33 +1,39 @@
 # BriefPilot design system
 
-BriefPilot remains its own product, but its visual language is intentionally aligned with Kitoki Studio.
+BriefPilot remains its own product, but its visual language is intentionally aligned with the **current Kitoki Studio palette**.
 
-## Reused Kitoki foundations
+## Kitoki palette used
 
-Source: current Kitoki design system in `kitoki-studio-showcase-main`.
+Source: current `kitoki-red-system.css` in `kitoki-studio-showcase-main`.
 
-- Background: `hsl(0 0% 99%)`
-- Foreground: `hsl(220 13% 10%)`
-- Surface: `hsl(220 14% 97%)`
-- Muted: `hsl(220 14% 96%)`
-- Muted text: `hsl(220 9% 42%)`
-- Border: `hsl(220 13% 91%)`
-- Mineral accent: `hsl(168 22% 42%)`
-- Mist accent: `hsl(200 18% 70%)`
+- Kitoki Red: `hsl(355 100% 45%)`
+- Kitoki Red Strong: `hsl(355 100% 39%)`
+- Kitoki Red Soft: `hsl(354 77% 95%)`
+- Washed Blue: `hsl(216 18% 36%)`
+- Washed Blue Strong: `hsl(216 19% 30%)`
+- Washed Blue Soft: `hsl(216 18% 95%)`
+- Ink: `hsl(220 13% 9%)`
+- Pearl: `hsl(45 22% 98%)`
 - Radius: 6px
 - Primary typeface: General Sans with system fallbacks
-- Headings use medium weight and tight negative tracking
-- Eyebrows use small uppercase text with a short hairline
-- Shadows stay almost flat: 1px / low-opacity rather than floating SaaS cards
 
-## BriefPilot-specific adaptations
+## How BriefPilot uses the palette
 
-- Mineral accent is used for agent-success states and the product wordmark dot.
-- Warm yellow is reserved for unresolved / judgment-required states.
-- The workflow stays visibly inspectable.
-- Dark action panel marks the transition from routine automation to the next meaningful action.
-- Product cards are deliberately restrained rather than decorative.
+- **Pearl** is the main background so the interface stays calm and editorial.
+- **Ink** anchors primary information and the human-decision panel.
+- **Washed Blue** structures panels, informational states, labels, and successful routine agent work.
+- **Kitoki Red** is intentionally reserved for action, attention, active states, and the wordmark dot.
+- **Red Soft** is used for the final human-decision state instead of introducing a foreign green/yellow status palette.
 
-## Principle
+## Borrowed interaction pattern
 
-BriefPilot should feel related to Kitoki without looking like a section copied from the Kitoki website.
+The agent activity panel reuses the restrained loading language from Kitoki's Website Check:
+- a red pulse dot for the current active/waiting step;
+- a narrow animated red scan track;
+- no fake percentage or implied completion estimate.
+
+This gives BriefPilot more visual identity while staying honest about what the agent is actually doing.
+
+## Product rule
+
+BriefPilot should feel visibly related to Kitoki without looking like a copied section of the Kitoki website. The palette is stronger now, but color remains disciplined rather than decorative.
