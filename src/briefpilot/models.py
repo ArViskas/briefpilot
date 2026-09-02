@@ -13,6 +13,7 @@ class Inquiry:
     timeline: Optional[str] = None
     budget_signal: Optional[str] = None
     references: List[str] = field(default_factory=list)
+    scope_signals: List[str] = field(default_factory=list)
 
 
 @dataclass
@@ -26,6 +27,9 @@ class Opportunity:
     recommended_next_action: Optional[str] = None
     main_risk: Optional[str] = None
     draft_reply: Optional[str] = None
+    activity: List[str] = field(default_factory=list)
+    human_decision_reasons: List[str] = field(default_factory=list)
+    followup_due_at: Optional[str] = None
 
     def to_dict(self):
         return asdict(self)
