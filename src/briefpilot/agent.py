@@ -16,6 +16,7 @@ from .tools import (
     create_or_update_lead,
     escalation_summary,
     inspect_site,
+    parse_inquiry,
     prepare_clarification,
     receive_client_reply,
     schedule_followup,
@@ -77,9 +78,7 @@ def build_agent(state_path: str = "data/demo_state.json"):
         Returns:
             The current opportunity state as JSON-compatible data.
         """
-        inquiry = __import__(
-            "src.briefpilot.tools", fromlist=["parse_inquiry"]
-        ).parse_inquiry(raw_text)
+        inquiry = parse_inquiry(raw_text)
         opportunity = create_or_update_lead(inquiry)
         store.save(opportunity)
         return opportunity.to_dict()
