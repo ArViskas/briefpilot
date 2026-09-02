@@ -57,3 +57,10 @@ The official Strands Python quickstart currently requires Python 3.10+ and the `
 - MIT or Apache open-source license
 - All source code and setup instructions
 - Working demo video, maximum 5 minutes
+
+
+## Zero-cost UI prototype
+
+A deterministic clickable UI prototype is available in `prototype/`.
+
+Open `prototype/index.html` directly in a browser. It makes no AWS or other external API calls and demonstrates the intended product flow from vague inquiry to a clear **Human decision required** state.
