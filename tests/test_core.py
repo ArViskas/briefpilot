@@ -91,3 +91,35 @@ def test_escalation_summary_exposes_decision_boundary():
 
     assert summary["status"] == "human_decision_required"
     assert "set price" in summary["human_decision_reasons"]
+
+
+def test_agent_layer_is_hard_disabled_without_flag(monkeypatch):
+    monkeypatch.setenv("BRIEFPILOT_ENABLE_AWS", "false")
+
+    from src.briefpilot.agent import aws_enabled, build_agent
+
+    assert aws_enabled() is False
+
+    try:
+        build_agent()
+    except RuntimeError as exc:
+        assert "promotional credits" in str(exc)
+    else:
+        raise AssertionError("build_agent() must stay disabled before credits are confirmed")
+
+
+def test_local_state_round_trip(tmp_path):
+    from src.briefpilot.state import LocalStateStore
+
+    inquiry = parse_demo_inquiry(
+        "WooCommerce redesign for homepage discount visibility."
+    )
+    opp = qualify(inquiry)
+
+    store = LocalStateStore(str(tmp_path / "state.json"))
+    store.save(opp)
+    loaded = store.require(opp.id)
+
+    assert loaded.id == opp.id
+    assert loaded.inquiry.platform == "WooCommerce"
+    assert loaded.missing_information == opp.missing_information
