@@ -1,0 +1,27 @@
+{
+  "id": "BP-DEMO-001",
+  "status": "human_decision_required",
+  "inquiry": {
+    "raw_text": "Hi,\n\nWe have an existing WooCommerce shop and want to redesign the homepage and make discounts much more visible throughout the buying journey. We like how another pharmacy store handles promotions.\n\nCan you help?",
+    "client_name": null,
+    "company": "Demo Client",
+    "website_url": "https://example-shop.test",
+    "requested_work": [
+      "redesign",
+      "discount visibility"
+    ],
+    "platform": "WooCommerce",
+    "timeline": "3 weeks",
+    "budget_signal": null,
+    "references": []
+  },
+  "missing_information": [],
+  "client_context": {
+    "site_type": "existing WooCommerce store",
+    "observed_scope_signal": "homepage + discount visibility across shopping journey"
+  },
+  "clarification_questions": [],
+  "recommended_next_action": "Human technical review before confirming scope and price.",
+  "main_risk": "Existing custom checkout logic should be reviewed before committing scope.",
+  "draft_reply": "Thanks — I have enough context for the next step. I’d first review the existing store structure and checkout logic, then confirm the exact scope, timing, and price."
+}

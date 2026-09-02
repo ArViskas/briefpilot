@@ -1,0 +1,19 @@
+[project]
+name = "briefpilot"
+version = "0.1.0"
+description = "AI-assisted client intake agent for freelancers and small studios"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+agent = [
+  "strands-agents>=1.0.0",
+  "strands-agents-tools>=0.2.0"
+]
+dev = [
+  "pytest>=8.0.0"
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
