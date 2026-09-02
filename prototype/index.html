@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BriefPilot — Zero-cost UI prototype</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">BriefPilot</p>
+        <h1>Client inquiry → qualified opportunity</h1>
+      </div>
+      <span class="mode-pill">ZERO-COST PROTOTYPE</span>
+    </header>
+
+    <section class="workspace">
+      <aside class="inbox-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Inbox</p>
+            <h2>New inquiries</h2>
+          </div>
+          <span class="count">1</span>
+        </div>
+
+        <button class="lead-card active" type="button">
+          <span class="lead-company">Demo Client</span>
+          <strong>WooCommerce redesign</strong>
+          <span>Discount visibility across buying journey</span>
+          <small>Just now</small>
+        </button>
+      </aside>
+
+      <section class="detail-panel">
+        <div class="detail-header">
+          <div>
+            <p class="eyebrow">Opportunity BP-DEMO-001</p>
+            <h2>WooCommerce redesign</h2>
+          </div>
+          <span id="statusBadge" class="status needs">Needs clarification</span>
+        </div>
+
+        <div class="columns">
+          <section class="card">
+            <p class="eyebrow">Client inquiry</p>
+            <blockquote>
+              We have an existing WooCommerce shop and want to redesign the homepage
+              and make discounts much more visible throughout the buying journey.
+              We like how another pharmacy store handles promotions. Can you help?
+            </blockquote>
+
+            <div class="facts">
+              <div><span>Platform</span><strong>WooCommerce</strong></div>
+              <div><span>Requested work</span><strong>Redesign · discount visibility</strong></div>
+              <div><span>Timeline</span><strong id="timelineValue">Unknown</strong></div>
+              <div><span>Website</span><strong id="websiteValue">Missing</strong></div>
+            </div>
+          </section>
+
+          <section class="card activity-card">
+            <p class="eyebrow">Agent activity</p>
+            <ol id="activityList" class="activity-list"></ol>
+          </section>
+        </div>
+
+        <section id="actionPanel" class="action-panel">
+          <div>
+            <p class="eyebrow">Missing information</p>
+            <h3>BriefPilot found 3 gaps before this lead is ready.</h3>
+            <ul>
+              <li>Current website URL</li>
+              <li>Desired timeline</li>
+              <li>Homepage-only vs product/cart scope</li>
+            </ul>
+          </div>
+          <button id="runButton" class="primary-button" type="button">Prepare clarification</button>
+        </section>
+      </section>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
